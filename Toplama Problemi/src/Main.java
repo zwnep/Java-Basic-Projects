@@ -66,6 +66,38 @@ public class Main {
         for(int l = 1; l <= num; l++){
             if (num % l == 0) System.out.println(l + " ");
         }
+        
+        //Örnek-6
+        //if ----> swicth statement
+
+        String myChar;
+        System.out.println("Bir sayı girin: ");
+        int numero = input.nextInt();
+
+        //case sabitlerinden hiçbiri ifade ile uyuşmuyorsa, programın akışı default‘u izleyen kısıma geçer.
+
+        switch (numero) {
+            case 5 :
+                myChar = "W";
+                break;
+            default:
+                switch (numero) {
+                    case 6 :
+                        myChar = "X";
+                        break;
+                    default:
+                        switch (numero){
+                            case 7:
+                                myChar = "Y";
+                                break;
+                            default:
+                                myChar = "Z";
+                                break;
+                        }
+                }
+
+        }
+        System.out.println(myChar);
 
     }
 }
